@@ -17,7 +17,7 @@ with st.sidebar:
     #LEFT_ARM = st.checkbox('Left Arm?', value=False, key='left_arm')
     #DO_NOT_CHECKBOX = st.checkbox('Do not start', value=False, key='not_start')
 
-raw_datasets  = pd.read_csv('data/final_dataset') #1553489 #Row = 1515003, Column = 15 (14 features + 1 label)
+#raw_datasets  = pd.read_csv('data/final_dataset') #1553489 #Row = 1515003, Column = 15 (14 features + 1 label)
 data = pd.read_csv('data/statistic.csv')
 
 if TASK == '따릉이 정보':
@@ -50,7 +50,7 @@ if TASK == '대여량 통계':
     #Raw Data
     if st.checkbox('Show Raw Data'):
         st.subheader('Raw Dataset')
-        st.write(raw_datasets[:500])
+        st.write(data[:500])
 
     st.subheader('📈 따릉이 대여량')
     tab1, tab2, tab3, tab4 = st.tabs(['따릉이 시간별 대여량', '따릉이 요일별 대여량', '따릉이 월별 대여량', '공휴일 따릉이 대여량'])
